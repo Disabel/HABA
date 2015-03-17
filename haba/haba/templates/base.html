@@ -1,21 +1,23 @@
 {% load url from future %}
 {% load staticfiles %}
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <!--[if lt IE 8]><script type="text/javascript" src="{{ STATIC_URL }}js/adquiridos/ie6-not-supported.js" ></script><![endif]-->
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/adquiridos/PIE.js"></script>
 <![endif]-->
-<meta name="keywords" content="Diseño Web,Software,Gráfico,Páginas web,Venezuela,Maracaibo,Presupuesto,Planes, sitio web">
+<meta name="keywords" content="hispanic, american, bankers, association, haba, florida, american, hugo, castro, banks">
 <meta name="author" content="José Ordoñez, Diana Chavez y Elibeth Quiñones">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 {% block head %} {% endblock%}
 <link rel="shortcut icon" type="image/x-icon" href="{{ STATIC_URL }}img/favicon.ico">
-<title>{% block title %} {% endblock%}</title>
+<title>{% block title %} HISPANIC AMERICAN BANKERS ASSOCIATION{% endblock%}</title>
 <link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/base.css">
+<link href='http://fonts.googleapis.com/css?family=Orienta' rel='stylesheet' type='text/css'>
 {% block css %}
 {% endblock %}
 {% block js %}
@@ -33,12 +35,26 @@
 	  ga('send', 'pageview');
 	</script> -->
 	<header id="home" class="cabecera">
-		<div class="wrapper">				
+		<div class="wrapper">			
+			<div class="logomenu">
+				<img class="mainlogo" src="{% static 'img/logo.png' %}" alt="Logo de Inverfanca">
+			</div>	
 			<nav class="barraNavegacion">
-				{% block navi %} {% endblock%}
+				{% block navi %} 
+					<ul>
+						<span>|</span><li class="index"><a href="{% url 'homepageindex' %}">Home</a></li><span>|</span>
+						<li class="works"><a href="{% url 'homepageaboutus' %}">About us</a></li><span>|</span>
+						<li class="services"><a href="{% url 'homepageservices' %}">Directors</a></li><span>|</span>
+						<li class="contact"><a href="{% url 'homapagecontact' %}">Application</a></li><span>|</span>
+						<li class="contact"><a href="{% url 'homapagecontact' %}">Blog</a></li>
+					</ul>	
+				{% endblock%}
+				<h1>Hispanic American Bankers Association</h1>
 			</nav>
+
 		</div>
 	</header>
+	<div class="separadorgris"></div>	
 	<section class="contenido">
 		{% block contenido %} {% endblock%}
 	</section>

@@ -27,10 +27,7 @@ def index(request):
 	return render_to_response('homepage/index.html', ctx, context_instance=RequestContext(request))
 
 def aboutus(request):
-	mision = "misión de la empresa"
-	vision = "visión de la empresa"
-	ctx = {'mision': mision, 'vision': vision}
-	return render_to_response('homepage/aboutus.html', ctx, context_instance=RequestContext(request))
+	return render_to_response('homepage/aboutus.html', context_instance=RequestContext(request))
 
 
 def directors(request):

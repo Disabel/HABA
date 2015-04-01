@@ -1,12 +1,14 @@
 from django.conf.urls import patterns, include, url
 from django.conf import settings
+from django.http import HttpResponse
+from sitemaps import StaticViewSitemap
 #from sitemaps import StaticViewSitemap
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
-'''sitemaps = {
+sitemaps = {
 	'pages': StaticViewSitemap,
-}'''
+}
 
 urlpatterns = patterns(
 	'',
@@ -17,7 +19,9 @@ urlpatterns = patterns(
 
 	# Uncomment the admin/doc line below to enable admin documentation:
 	# url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
+	url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
+	#Google Web master Tool
+	(r'^googlec34fe789f50fc843\.html$', lambda r: HttpResponse("google-site-verification: googlec34fe789f50fc843.html", mimetype="text/plain")),
 	# Uncomment the next line to enable the admin:
 	url(r'^admin/', include(admin.site.urls)),
 	url(r'^admin/password_reset/$', 'django.contrib.auth.views.password_reset', name='admin_password_reset'),

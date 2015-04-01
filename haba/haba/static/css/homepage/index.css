@@ -36,7 +36,6 @@ nav .index{
   height: 57px;
   padding-top: 15px;
   overflow: hidden;
-  margin-bottom: 20px;
 }
 .grisentradas .titulo{
   display: inline-block;
@@ -131,7 +130,9 @@ article .texto{
 }
 @media screen and (max-width: 450px){
   .flex-caption{
-    display: none;
+    display: block;
+    position: relative;
+    width: 100%;
   }
 }
 

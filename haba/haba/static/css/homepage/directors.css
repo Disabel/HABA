@@ -1,5 +1,6 @@
 .cabecera{
-	background: url(../../img/maindirectors.png) no-repeat !important; 
+  background: url(../../img/maindirectors.png) no-repeat center center;
+  background-size: cover; 
 }
 .barraNavegacion .directors{
   background-color: #CE2128;

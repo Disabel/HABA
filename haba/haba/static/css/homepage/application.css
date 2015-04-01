@@ -1,5 +1,6 @@
 .cabecera{
-  background: url(../../img/mainapplication.png) no-repeat !important; 
+  background: url(../../img/mainapplication.png) no-repeat center center;
+  background-size: cover;
 }
 .barraNavegacion .application{
   background-color: #CE2128;
@@ -115,6 +116,7 @@
   width: 100%;
   text-align: center;
   margin-top: 50px;
+  margin-bottom: 30px;
 }
 .gracias{
   margin: 100px 10px;

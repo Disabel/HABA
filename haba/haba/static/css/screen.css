@@ -1,5 +1,6 @@
 .cabecera{
-	background: url(../img/maindirectors.png) no-repeat !important; 
+	background: url(../img/maindirectors.png) no-repeat center center !important;
+	background-size: cover !important;
 }
 .barraNavegacion .blog{
   background-color: #CE2128;

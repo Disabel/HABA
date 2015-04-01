@@ -47,6 +47,9 @@ nav li{
   padding-right: 30px;
   padding-left: 30px;
 }
+nav li:hover a{
+	background: #F25454;
+}
 nav a{
 	color: #FFF;
 	text-transform: uppercase;
@@ -66,7 +69,6 @@ nav a{
 	width: 100%;
 	height: 25px;
 	background-color: #D7D0D0;
-	margin-top: 40px;
 }
 footer{
 	text-align: center;

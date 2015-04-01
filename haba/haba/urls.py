@@ -24,6 +24,23 @@ urlpatterns = patterns(
 	(r'^admin/password_reset/done/$', 'django.contrib.auth.views.password_reset_done'),
 	(r'^reset/(?P<uidb36>[0-9A-Za-z]+)-(?P<token>.+)/$', 'django.contrib.auth.views.password_reset_confirm'),
 	(r'^reset/done/$', 'django.contrib.auth.views.password_reset_complete'),
+	#Zinnia Blog
+	url(r'^blog/', include('zinnia.urls', namespace='zinnia')),
+	url(r'^', include('zinnia.urls.capabilities')),
+	url(r'^search/', include('zinnia.urls.search')),
+	url(r'^sitemap/', include('zinnia.urls.sitemap')),
+	url(r'^trackback/', include('zinnia.urls.trackback')),
+	url(r'^blog/tags/', include('zinnia.urls.tags')),
+	url(r'^blog/feeds/', include('zinnia.urls.feeds')),
+	url(r'^blog/authors/', include('zinnia.urls.authors')),
+	url(r'^blog/categories/', include('zinnia.urls.categories')),
+	#url(r'^comments/', include('django.contrib.comments.urls')),
+	url(r'^comments/', include('django_comments.urls')),
+	url(r'^blog/', include('zinnia.urls.entries')),
+	url(r'^blog/', include('zinnia.urls.archives')),
+	url(r'^blog/', include('zinnia.urls.shortlink')),
+	url(r'^blog/', include('zinnia.urls.quick_entry')),
+	url(r'^blog/comments/', include('zinnia.urls.comments')),	
 )
 
 if settings.DEBUG:

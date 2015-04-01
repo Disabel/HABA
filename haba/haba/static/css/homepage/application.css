@@ -1,0 +1,235 @@
+.cabecera{
+  background: url(../../img/mainapplication.png) no-repeat !important; 
+}
+.barraNavegacion .application{
+  background-color: #CE2128;
+}
+.fondogris{
+	background-color: #D8D9D8;
+	text-align: right;
+	 padding-bottom: 34px;
+}
+.fondogris h2, .fondogris h3{
+	margin: 0;
+	padding: 0;
+}
+.fondogris h2{
+  text-transform: uppercase;
+  color: #CE2128;
+  font-size: 2em;
+}
+.fondogris h3, .direccion{
+	color: #5F5E5D;
+	margin: 0;
+	text-transform: uppercase;
+}
+.banking-3{
+	background-color: blue;
+}
+.generalinformation  .campo{
+    display: inline-block;
+  width: 49%;
+    vertical-align: top;
+}
+.generalinformation label{
+  display: inline-block;
+ width: 155px;
+  margin-left: 56px;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: top;
+}
+.generalinformation input{
+  margin-bottom: 20px;
+  width: 270px;
+
+}
+.bankinghistory .img, .educationpart .img, .generalinformation .img{
+	display: inline-block;
+	width: 72px;
+	height: 72px;
+	background: url(../../img/applicationicons.png) no-repeat;
+}
+.bankinghistory .img{
+	background-position: -72px 0;
+}
+.educationpart .img{
+	background-position: -145px 0;
+}
+.bankinghistory h3, .educationpart h3, .generalinformation h3{
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  font-size: 1.7em;
+  font-weight: 100;
+  color: #243E87;
+  margin-top: 15px;
+  border-bottom: solid 1px #F2B3B3;
+  width: 91%;
+}
+.titulo{
+	margin:20px 0;
+}
+.fixdelete{
+  width: 20px !important;
+  height: 29px;
+}
+
+#id_banking-0-DELETE, #id_education-0-DELETE{
+	display: none;
+}
+#id_education-0-course_of_study{
+	  margin-right: 41%;
+}
+
+.banking div, .education div{
+	margin-bottom: 30px;
+}
+.addboton .btn{
+  display: inline-block;
+  padding: 6px 12px;
+  text-decoration: none;
+  background-color: #CE2128;
+  color: #FFF;
+  text-transform: uppercase;
+  width: 42px;
+  vertical-align: top;
+  margin-top: 0px;
+    text-align: center;
+}
+.addboton img{
+  margin-left: -21px;}
+.addboton{
+	text-align: right;
+}
+.btn-primary{
+  background-color: #ACA6A6;
+  border: none;
+  padding: 10px 103px;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 1.3em;
+
+}
+.centrarboton{
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+.gracias{
+  margin: 100px 10px;
+}
+.generalinformation .errorlist{
+  display: inline-block;
+  width: 376px;
+  margin: 0 10px 64px 64px;
+  background-color: rgb(241, 225, 225);
+  list-style: none;
+}
+.bankinghistory .errorlist{
+    width: 97px;
+}
+.education .errorlist {
+  width: 180px;
+  }
+.education .campo,.bankinghistory .campo{
+  display: inline-block;
+  margin-right: 22px;
+  vertical-align: top;
+}
+.bankinghistory .errorlist, .education .errorlist{
+  background-color: rgb(241, 225, 225);
+  list-style: none;
+  padding: 5px;
+  text-align: center;
+}
+.education input,.bankinghistory input{
+    display: block;
+}
+.education label, .bankinghistory label{
+   margin-bottom: 8px;
+  display: block;
+}
+#id_banking-0-financial_institution, #id_banking-0-position_or_title, .masgrande{
+   width: 270px;
+}
+#id_banking-0-from_date, #id_banking-0-to_date, .bankingdate{
+  width: 130px;
+}
+
+#id_education-0-collage_or_university, .collage{
+    width: 327px;
+}
+
+#id_education-0-type_of_degree, .degree{
+    width: 333px;
+}
+.education select{
+    width: 330px;
+}
+
+#id_education-0-course_of_study, .course{
+    width: 577px;
+}
+.obligatorio
+{
+    text-align: right;
+    font-size: 0.8em; 
+    margin: 10px; 
+}
+span{
+  color: #CE2128;
+  font-size: 0.9em;
+}
+.botonremove{  
+  display: inline-block;
+  margin-top: 26px;
+  background-color: #CE2128;
+  border: none;
+  color: #FFF;}
+
+.separador{
+  width: 90%;
+  height:1px;
+  background-color: #CE2128;
+}
+@media screen and (max-width: 1000px){
+  .generalinformation input {
+  margin-bottom: 30px;
+  width: 54%;
+}
+.generalinformation label {
+  width: 29%;
+  margin-left: 3%;
+  line-height: 14px;
+}
+
+.cabecera h1{
+display:none;
+}
+.bankinghistory h3, .educationpart h3, .generalinformation h3{
+    width: 82%;
+}
+#id_education-0-course_of_study, .course{
+    width: 93%;
+}
+}
+@media screen and (max-width: 500px){
+  .generalinformation .campo{
+      width: 96%;
+  }
+  .education .campo, .bankinghistory .campo{
+    width: 96%;
+    margin-right: 0px;
+  }
+  .education label, .bankinghistory label{
+    margin-right:0;
+    width: 90%;
+  }
+  .education input, .bankinghistory input{
+    width: 80% !important;
+  }
+  .education select{
+    width: auto;
+  }
+}

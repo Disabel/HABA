@@ -1,0 +1,137 @@
+nav .index{
+  background-color: #CE2128;
+}
+.flex-caption a{
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  background-color: #CE2128;
+  color: #fff;
+  text-transform: uppercase;
+  width: 149px;
+  font-size: 2em;
+  text-align: center;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15) inset,0 0 6px rgba(0,0,0,.2) inset;
+  border-color: #000\9;
+}
+.flex-caption{
+  position: absolute;
+   top: 38%;
+}
+.cuadroblanco{
+	background-color: #fff;
+	opacity: 0.8;
+	margin-top: 23px;
+}
+.cuadroblanco p{
+  display: inline-block;
+  text-transform: uppercase;
+  margin-left: 10px;
+  width: 142px;
+  border-right: solid 1px #CE2128;
+  font-weight: bold;
+}
+.grisentradas{
+  background-color: #D8D9D8;
+  height: 57px;
+  padding-top: 15px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.grisentradas .titulo{
+  display: inline-block;
+  width: 26%;
+  height: 39px;
+  overflow: hidden;
+  vertical-align: top;
+  text-align: center;
+  margin-right: 35px;
+  margin-left: 35px;
+}
+.tituloent{
+  display: none;
+  height: 39px;
+  overflow: hidden;
+  vertical-align: top;
+  text-align: center;
+  margin-right: 35px;
+  margin-left: 35px;
+  color: #000;
+}
+article{
+  display: inline-block;
+  width: 26%;
+  margin-right: 35px;
+  margin-left: 35px;
+  vertical-align: top;
+  text-align: center;
+}
+.imgdiv img{
+  width: 251px;
+  height: 194px;
+  margin-bottom: 10px;
+}
+article .texto{
+  text-align: justify;
+  color: #000;
+  height: 142px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.noticias a{
+  text-decoration: none;
+}
+.readmore .btn{
+  display: inline-block;
+  padding: 6px 20px;
+  text-decoration: none;
+  background-color: #CE2128;
+  color: #FFF;
+  text-transform: uppercase;
+  width: 42px;
+  vertical-align: top;
+  margin-top: 0px;
+    text-align: center;
+}
+.readmore img{
+  margin-left: -21px;}
+
+@media screen and (max-width: 1000px){
+  .grisentradas{
+    display: none;
+  }
+  .tituloent{
+    display: inline-block;
+    margin-top: 15px;
+  }
+  article{
+    width: 41%;
+  margin-right: 4%;
+  margin-left: 4%;
+  }
+  article .texto{
+    height: 182px;
+}
+}
+@media screen and (max-width: 600px){
+  .flex-caption{
+    top: 0;
+  }
+  article{
+  width: 90%;
+  }
+  .flex-caption a{
+    display: none;
+  }
+  .cuadroblanco p{
+    text-transform: capitalize;
+    margin-left: 0;
+    font-weight: normal;
+  }
+}
+@media screen and (max-width: 450px){
+  .flex-caption{
+    display: none;
+  }
+}
+

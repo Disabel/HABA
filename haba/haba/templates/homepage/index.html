@@ -5,36 +5,73 @@
 <meta name="description" content="">
 {% endblock%}
 {% block title %}
-Duranjo Web
+Hispanic American Bankers Association
 {% endblock%}
 {% block css%}
-<link rel="stylesheet" href="{{ STATIC_URL }}css/index.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/index.css">
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
 {% endblock %}
 {% block js %}
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script type="text/javascript" src="{{ STATIC_URL }}js/adquiridos/back-top.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/adquiridos/back-top.js' %}"></script>
+<script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
 {% endblock %}
-{% block navi %}
-		<ul>
-			<li class="index"><a href="{% url 'homepageindex' %}">Inicio</a></li>
-			<li class="works"><a href="{% url 'homepageworks' %}">Trabajos</a></li>
-			<li class="services"><a href="{% url 'homepageservices' %}">Servicios</a></li>
-			<li class="contact"><a href="{% url 'homapagecontact' %}">Contacto</a></li>
-		</ul>				
-{% endblock %}
+
 {% block clear %}{% endblock%}
 {% block contenido %}
 	<section class="bannerPrincipal">
-		<h1>Titulo importante</h1>
-		<div class="wrapper banner1">
+	<div class="sliderPosition">
+		<div class="flexslider">
+			<ul class="slides">
+				<li>
+					<img src="{% static 'img/banner.png' %}" alt="imagen1">		
+					<div class="wrapper">			
+						<div class="flex-caption">
+							<a href="{% url 'homapageapplication' %}">Join us</a>
+							<div class="cuadroblanco">
+								<p>Banking and financial issues</p>
+								<p>Exchance information</p>
+								<p>networking and social gathering</p>	
+							</div>				
+						</div>
+					</div>	
+				</li>
+			</ul>
+		</div>		
+	</div>
+	</section>
+	<div class="grisentradas">
+		<div class="wrapper">
+			{% for titulo in titulos %}
+				<div class="titulo">{{ titulo }}</div>
+			{% endfor %}
+		</div>
+	</div>
+	<section class="entradas">
+		<div class="wrapper">	
+			<div class="noticias">
+				{% for entrada in entradas %}
+				<a href="{{ entrada.get_absolute_url }}" >
+				<article>
+				<div class="tituloent">{{ entrada.title }}</div>
+				<div class="imgdiv">
+					{% if entrada.image %}
+						<img src="{{ MEDIA_URL }}{{entrada.image}}" alt="{{ entrada.title }}">
+					{% else %}
+						<img src="{% static 'img/about.jpg' %}" alt="HISPANIC AMERICAN BANKERS"/>
+					{% endif %}	
+				</div>				
+					<div class="texto">{{ entrada.content }}...</div>
+					<div class="readmore">
+						<a href="#" class="btn">Read</a>
+						<a href="{{ entrada.get_absolute_url }}"> <img src="{% static 'img/botonicon.png' %}" alt="icono 	suma mas"></a>
+					</div>
+				</article>
+			</a>
+				{% endfor %}
+			</div>
 		</div>
 	</section>
-	<section class="ofrecemos">		
-	</section>
-	<section class="aboutus">		
-	</section>
-	<section class="infoContacto">
-	</section>	
 	<!-- Google+ SCRIPT --> 
 		<!-- Place this tag after the last badge tag. -->
 		<script  async type="text/javascript">
@@ -56,9 +93,13 @@ Duranjo Web
 		}(document, 'script', 'facebook-jssdk'));</script>
 	<!-- TWITTER SCRIPT -->
 	<script async>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-	
-	<!-- BACK TOP BOX -->
-	<div id="back-top" class="back-top">
-		<a href="#home"><span>↑</span>Regresar arriba</a>
-	</div>
+		<!-- SLIDER INIT -->
+	<script>
+			$(document).ready(function() {
+			  $('.flexslider').flexslider({
+				//animation: "slide" si las imagenes son diferente tamaño poner sin slide
+			  });
+			});
+	</script>	
+
 {% endblock%}

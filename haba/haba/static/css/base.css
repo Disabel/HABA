@@ -1,1 +1,112 @@
 @charset 'utf-8';
+
+body{
+	font-family: 'Orienta', sans-serif;
+	margin: 0;
+}
+
+.wrapper{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto 0 auto;
+}
+
+.cabecera{
+	height: 200px;
+	width: 100%;
+	background-color: #243E87;
+}
+.mainlogo{
+	width: 178px;
+}
+.separadorgris{
+	width: 100%;
+	height: 30px;
+	background-color: #D8D9D8;
+}
+.logomenu{
+	display: inline-block;
+	margin-top: 13px;
+}
+nav{
+	display: inline-block;
+	width: 81%;
+	text-align: right;
+	vertical-align: top;
+	margin-top: 82px;
+  }
+  nav select {
+  display: none;
+}
+nav ul{
+	padding: 0px;
+	margin: 0px;
+}
+nav li{
+	display: inline-block;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+nav a{
+	color: #FFF;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.barraNavegacion span{
+	 color: #888690;
+}
+.cabecera h1{
+  text-transform: uppercase;
+  margin-right: 30px;
+  color: #D7D0D0;
+  font-size: 1.2em;
+  font-weight: 100;
+}
+.footerline{
+	width: 100%;
+	height: 25px;
+	background-color: #D7D0D0;
+	margin-top: 40px;
+}
+footer{
+	text-align: center;
+}
+.linea1 span, .linea2 span{
+	padding: 0 10px;
+}
+.linea2{
+  color: rgb(111, 121, 118);}
+
+@media screen and (max-width: 1000px){
+	.wrapper{
+		width: 100%;
+	}
+	.logomenu{
+		width: 100%;
+  		text-align: center;
+	}
+	.cabecera{
+		height: auto;
+	}
+	nav{
+		width: 100%;
+		text-align: center;
+		margin-top: 10px;
+
+	}
+}
+@media screen and (max-width: 750px){
+		nav ul { display: none; }
+	nav select { display: inline-block; }
+	nav select{
+		text-align: center;
+	  width: 70%;
+	  font-size: 1.5em;
+		padding: 5px;
+		margin-bottom: 20px;
+	  background: #ECE8E8;
+	  color: #000;
+		border: none;
+		text-indent: 5px;
+  	}
+}

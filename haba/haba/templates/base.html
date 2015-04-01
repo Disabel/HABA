@@ -37,17 +37,25 @@
 	<header id="home" class="cabecera">
 		<div class="wrapper">			
 			<div class="logomenu">
-				<img class="mainlogo" src="{% static 'img/logo.png' %}" alt="Logo de Inverfanca">
+				<img class="mainlogo" src="{% static 'img/logo.png' %}" alt="Logo de Hispanic American Bankers">
 			</div>	
 			<nav class="barraNavegacion">
 				{% block navi %} 
 					<ul>
 						<span>|</span><li class="index"><a href="{% url 'homepageindex' %}">Home</a></li><span>|</span>
-						<li class="works"><a href="{% url 'homepageaboutus' %}">About us</a></li><span>|</span>
-						<li class="services"><a href="{% url 'homepageservices' %}">Directors</a></li><span>|</span>
-						<li class="contact"><a href="{% url 'homapagecontact' %}">Application</a></li><span>|</span>
-						<li class="contact"><a href="{% url 'homapagecontact' %}">Blog</a></li>
+						<li class="aboutus"><a href="{% url 'homepageaboutus' %}">About us</a></li><span>|</span>
+						<li class="directors"><a href="{% url 'homepagedirectors' %}">Directors</a></li><span>|</span>
+						<li class="application"><a href="{% url 'homapageapplication' %}">Application</a></li><span>|</span>
+						<li class="blog"><a href="/blog">Blog</a></li>
 					</ul>	
+					<select> 
+						<option value="" selected="selected">Menú</option> 
+						<option value="{% url 'homepageindex' %}">Home</option>
+						<option value="{% url 'homepageaboutus' %}">About us</option>
+						<option value="{% url 'homepagedirectors' %}">Directors</option>
+						<option value="{% url 'homapageapplication' %}">Application</option>
+						<option value="/blog">Blog</option>
+					</select>		
 				{% endblock%}
 				<h1>Hispanic American Bankers Association</h1>
 			</nav>
@@ -61,12 +69,20 @@
 	{% block clear %} {% endblock %}
 	<footer>
 		{% block footer %}{% endblock%}
+		<div class="footerline"></div>
 		<div class="wrapper">
-			<div class="footer-der">
+			<div class="linea1">
+				<p>P.O Box 348084, Coral Gables, Fl. 33234 <span></span> © Copyright 2015 Todos los Derechos Reservados</p>
 			</div>
-			<div class="footer-izq">
+			<div class="linea2">
+				<p>TEL: 305-505-7430 <span></span> e-mail: contacto@hababanquers.com</p>
 			</div>		  
 		</div>
 	</footer>
+	<script>
+	$("nav select").change(function() {
+	    window.location = $(this).find("option:selected").val();
+	});    
+	</script>	
 </body>
 </html>

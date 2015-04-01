@@ -1,7 +1,8 @@
 #!/usr/local/bin/python
 # -*- encoding: utf-8 -*-
 from django import forms
-
+from django.forms.models import inlineformset_factory
+from .models import MembersApplication, BankingHistory, Education
 
 class contactForm(forms.Form):
 	nombre = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su nombre'}))
@@ -22,3 +23,18 @@ class contactForm(forms.Form):
 		if len(texto) < 4:
 			raise forms.ValidationError("*")
 		return texto
+
+class MemberForm(forms.ModelForm):
+    class Meta:
+        model = MembersApplication
+
+class BankingHistoryForm(forms.ModelForm):
+    class Meta:
+        model = BankingHistory
+
+class EducationForm(forms.ModelForm):
+    class Meta:
+        model = Education        
+
+MemberFormSet = inlineformset_factory(MembersApplication, BankingHistory, extra=1)
+MemberFormSet2 = inlineformset_factory(MembersApplication, Education, extra=1)

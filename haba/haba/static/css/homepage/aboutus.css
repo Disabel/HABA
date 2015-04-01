@@ -1,0 +1,45 @@
+.cabecera{
+	background: url(../../img/mainabout.png) no-repeat !important; 
+}
+.barraNavegacion .aboutus{
+  background-color: #CE2128;
+}
+.entry-image{
+	width: 30%;
+	float: right;
+	margin-left: 12px;
+}
+
+.entry-image img{
+	width: 100%;
+}
+.txtabout{
+	text-align: justify;
+}
+.quienessomos h2{
+  text-transform: uppercase;
+  color: #CE2128;
+  text-align: center;
+  font-size: 2em;
+}
+.fondogris{
+	background-color: #D8D9D8;
+}
+.separadorgris {
+  width: 100%;
+  height: 259px;
+  background-color: #D8D9D8;
+  position: absolute;
+  z-index: -1;
+}
+@media screen and (max-width: 1000px){
+  .txtabout{
+    padding: 0 20px;
+  }
+  .separadorgris{
+    height: auto;
+  }
+  .cabecera h1{
+    display: none;
+  }
+}

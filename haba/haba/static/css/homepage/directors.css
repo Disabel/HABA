@@ -1,0 +1,166 @@
+.cabecera{
+	background: url(../../img/maindirectors.png) no-repeat !important; 
+}
+.barraNavegacion .directors{
+  background-color: #CE2128;
+}
+.fondogris1{
+	background-color: #D8D9D8;
+	text-align: right;
+	 padding-bottom: 5px;
+}
+.fondogris2, .fondogris3{
+	background-color: #D8D9D8;
+	  padding: 8px 0;
+}
+.fondogris3{
+	text-align: center;
+}
+.fondogris1 h2{
+	text-transform: uppercase;
+  color: #CE2128;
+  text-align: right;
+  font-size: 1.7em;
+  margin: 0;
+}
+.fondogris1 h3{
+  color: #5F5E5D;
+  margin: 0;
+  text-transform: uppercase;
+}
+.fondogris1 .img, .fondogris2 .img, .fondogris3 .img{
+	width: 62px;
+	height: 61px;
+	background: url(../../img/directorsicons.png) no-repeat;
+}
+.chairman .img{
+	background-position: 0 0;
+}
+.president .img{
+	  background-position: -65px 0;
+}
+.vicepresident .img{
+	  background-position: -128px 0;
+}
+.chairman, .president, .vicepresident{
+	  display: inline-block;
+	  vertical-align: top;
+	  width: 33%;
+	  text-align: center;
+	  margin-top: 55px;
+}
+.chairmanname, .presidentname, .vicepresidentname{
+	  display: inline-block;
+	  vertical-align: top;
+	  width: 33%;
+	  text-align: center;
+	  margin-top: 5px;
+	    margin-bottom: 50px;
+}
+.fondogris1 .img, .fondogris1 h4, .fondogris2 .img, .fondogris2 h4, .fondogris3 .img, .fondogris3 h4{
+	display: inline-block;
+	vertical-align: top;
+}
+.fondogris1 h4, .fondogris2 h4, .fondogris3 h4{
+  text-transform: uppercase;
+  color: #243E87;
+  padding-left: 9px;
+  font-size: 1.3em;
+  margin-top: 16px;
+}
+.secretary,.treasurer{
+	display: inline-block;
+	width: 41%;
+	vertical-align: top;
+}
+.secretary {
+  text-align: right;
+  margin-right: 12%;
+}
+.secretary .img{
+	background-position: -193px 0;
+}
+.treasurer .img{
+	background-position: -258px 0;
+}
+.directors .img{
+	background-position: -320px 0;
+}
+.secretaryname, .treasurername{
+	display: inline-block;
+	width: 42%;
+	vertical-align: top;
+	margin-bottom: 50px;
+}
+.secretaryname{
+  text-align: right;
+  margin-right: 14%;
+}
+.fondoblanco ul{
+	list-style: none;
+	margin:0;
+	padding: 0;
+	 font-size: 1.3em;
+}
+.secretaryname img{
+  padding-right: 70px;
+}
+.treasurername img{
+  padding-left: 70px;
+}
+.directorname{
+	display: inline-block;
+	width: 32%;
+	vertical-align: top;
+	text-align: center;
+}
+.directorname p{
+  font-size: 1.3em;
+  height: 25px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1000px){
+	.cabecera h1{
+		display: none;
+	}
+	.fondogris1 h2, .fondogris1 h3{
+		margin-right: 15px;
+	}
+	.fondogris1 h4, .fondogris2 h4, .fondogris3 h4{
+		  width: 93%;
+	}
+	.chairman, .president, .vicepresident{
+		width: 32%;
+	}
+	.chairmanname, .presidentname, .vicepresidentname{
+		width: 32%
+	}
+}
+@media screen and (max-width: 700px){
+ 	.secretary, .treasurer{
+     width: 49%;
+     text-align: center;
+     margin: 0;
+ 	}
+ }
+@media screen and (max-width: 400px){
+.fondogris1 h4, .fondogris2 h4, .fondogris3 h4{
+	font-size: 1em;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	}
+	.fondoblanco ul{
+		font-size: 1em;
+	}
+	.directorname p {
+ 	 font-size: 1em;
+ 	 height: auto;
+ 	}
+ 	.directorname{
+ 	width: 46%;
+  	margin-right: 3%;
+ 	}
+
+}
